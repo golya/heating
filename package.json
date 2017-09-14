@@ -46,6 +46,7 @@
     "npm-watch": "0.1.6"
   },
   "dependencies": {
+    "async-mqtt": "1.0.1",
     "babel-polyfill": "6.16.0",
     "lab-config": "1.0.0",
     "lab-di": "1.1.6",
