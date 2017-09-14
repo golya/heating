@@ -11,4 +11,5 @@ function World() {
 }
 
 function setupConfig(config) {
+  config.update('broker', 'memory');
 }
