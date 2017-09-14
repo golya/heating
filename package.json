@@ -1,0 +1,54 @@
+{
+  "name": "heating-control-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "test": "npm-watch",
+    "test:all": "npm run test:unit && npm run test:feature",
+    "test:unit": "jest",
+    "test:unit-watch": "jest --watch",
+    "test:feature": "SUPPRESS_NO_CONFIG_WARNING=true ./node_modules/cucumber/bin/cucumber.js ./features --compiler es6:babel-core/register  --require ./features"
+  },
+  "jest": {
+    "testRegex": ".*\\.test\\.js$"
+  },
+  "watch": {
+    "test:feature": {
+      "patterns": [
+        "**"
+      ],
+      "quiet": true,
+      "extensions": [
+        "js",
+        "json",
+        "feature"
+      ],
+      "ignore": [
+        "node_modules"
+      ]
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.18.2",
+    "babel-eslint": "7.1.0",
+    "babel-jest": "17.0.2",
+    "babel-loader": "6.2.7",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-node6": "11.0.0",
+    "babel-preset-stage-0": "6.16.0",
+    "chai": "3.5.0",
+    "cucumber": "1.3.2",
+    "jest": "17.0.3",
+    "npm-watch": "0.1.6"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.16.0",
+    "lab-config": "1.0.0",
+    "lab-di": "1.1.6",
+    "lodash": "4.16.6"
+  }
+}
